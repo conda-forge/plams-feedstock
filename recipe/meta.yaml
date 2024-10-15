@@ -21,7 +21,9 @@ requirements:
     - setuptools
   run:
     - dill >=0.2.4
-    - numpy
+    - natsort
+    - numpy <2
+    - scipy
     - python >=3.7
 
 test:
