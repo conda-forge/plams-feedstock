@@ -1,5 +1,5 @@
 {% set name = "plams" %}
-{% set version = "2024.103" %}
+{% set version = "2024.104" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plams-{{ version }}.tar.gz
-  sha256: 0ee90296b44c71e8ab06ac43a575a6dc764a20852f6a12ad7b2a9621e55ac1a8
+  sha256: 41b1000e7f057cecc063211acf4620f5acddcc565eeffe42f6343ce773564d88
 
 build:
   noarch: python
