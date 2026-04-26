@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: plams
-  version: 2026.102
+  version: "2026.102"
 
 package:
   name: ${{ name|lower }}
