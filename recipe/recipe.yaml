@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  name: plams
+  version: "2026.102"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plams-${{ version }}.tar.gz
+  sha256: d70ad1d6d7a443fe631a679af57553f6967043225ba0a8f0cbe3d633c0d0b8c5
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - hatchling
+    - hatch-vcs
+  run:
+    - dill >=0.2.4
+    - natsort
+    - numpy <2
+    - scipy
+    - python >=${{ python_min }}
+    - typing_extensions
+
+tests:
+  - python:
+      imports:
+        - scm.plams
+        - scm.plams.core
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Python Library for Automating Molecular Simulations
+  license: LGPL-3.0-or-later
+  license_file:
+    - LICENSE
+  homepage: https://www.scm.com/doc/plams/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
