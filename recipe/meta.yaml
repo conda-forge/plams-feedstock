@@ -26,6 +26,7 @@ requirements:
     - numpy <2
     - scipy
     - python >={{ python_min }}
+    - typing_extensions 
 
 test:
   imports:
