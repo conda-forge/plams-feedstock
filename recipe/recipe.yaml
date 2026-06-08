@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: plams
-  version: "2026.103"
+  version: "2026.104"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plams-${{ version }}.tar.gz
-  sha256: 4004bc8b37903eae5b6ef3c42c443a9dc2f26e20fab417eeccb0ebb7312875de
+  sha256: 9b854dcfcf34cbe37c07f919850eb90cdc5a2c9b22921ce3133ae2a618f58f6e
 
 build:
   number: 0
